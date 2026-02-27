@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev:frontend": "cd cafe && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "cross-env METRO_CACHE_DIR=D:/metro_cache concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:frontend:tunnel": "cd cafe && npm run tunnel",
+    "dev:tunnel": "cross-env METRO_CACHE_DIR=D:/metro_cache concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm:dev:backend\" \"npm:dev:frontend:tunnel\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "expo": "^49.0.23",
+    "expo-firebase-recaptcha": "^1.4.4"
+  }
+}
