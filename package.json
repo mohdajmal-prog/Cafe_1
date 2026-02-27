@@ -4,7 +4,10 @@
     "dev:backend": "cd backend && npm run dev",
     "dev": "cross-env METRO_CACHE_DIR=D:/metro_cache concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm:dev:backend\" \"npm:dev:frontend\"",
     "dev:frontend:tunnel": "cd cafe && npm run tunnel",
-    "dev:tunnel": "cross-env METRO_CACHE_DIR=D:/metro_cache concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm:dev:backend\" \"npm:dev:frontend:tunnel\""
+    "dev:tunnel": "cross-env METRO_CACHE_DIR=D:/metro_cache concurrently --kill-others-on-fail --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm:dev:backend\" \"npm:dev:frontend:tunnel\"",
+    "build": "cd backend && npm install",
+    "vercel-build": "cd backend && npm install",
+    "start": "cd backend && npm start"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
